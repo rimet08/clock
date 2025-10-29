@@ -15,7 +15,10 @@ int main() {
 
     while (isRunning) {
 
-        isR
+        printf("test\n");
+
+        sleep(1);
+
     }
 
 
