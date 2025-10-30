@@ -3,6 +3,7 @@
 #include <time.h>
 #include <stdbool.h>
 #include <unistd.h>
+#include <windows.h>
 
 int main() {
     // DIGITAL CLOCK //
@@ -15,12 +16,14 @@ int main() {
 
     while (isRunning) {
 
-        printf("test\n");
+        time (&rawtime);
+        pTime = localtime(&rawtime);
+        printf("%d:%d:%d\n", pTime->tm_hour, pTime->tm_min, pTime->tm_sec);
 
-        sleep(1);
+        Sleep(1);
 
     }
-
+    return 0;
 
 
 
